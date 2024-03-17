@@ -1,0 +1,80 @@
+*,
+::after,
+::before {
+  padding: 0;
+  margin: 0;
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  background: radial-gradient(red, lightblue, pink);
+}
+.pagination {
+  /* min-width: 300px; */
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 15px;
+  border-radius: 25px;
+}
+.pagination li {
+  list-style: none;
+}
+li.num {
+  font-size: 20px;
+  font-weight: 700;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  color: #fff;
+  text-align: center;
+  line-height: 30px;
+  background-color: blueviolet;
+  opacity: 0.3;
+  cursor: pointer;
+  transition: 0.3s;
+}
+li.active {
+  background-color: red;
+  opacity: 1;
+}
+li.num:hover {
+  opacity: 1;
+}
+li.dots {
+  font-size: 25px;
+  font-weight: 700;
+  cursor: default;
+}
+li.prev,
+li.next {
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background-color: blueviolet;
+  opacity: 0.3;
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s;
+}
+li.prev {
+  border-radius: 12px 0 0 12px;
+}
+li.next {
+  border-radius: 0 12px 12px 0;
+}
+li.prev:hover,
+li.next:hover {
+  opacity: 1;
+}
